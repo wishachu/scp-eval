@@ -4,12 +4,28 @@
   "description": "For evaluation of the DHIS2 SCP",
   "author": "wishachu",
   "license": "MIT",
-  "repository": "wishachu/scp-eval",
+  "repository": {
+    "url": "https://github.com/wishachu/scp-eval",
+    "type": "git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.tsx",
   "engines": {
     "node": ">=10"
+  },
+  "keyword": [
+    "dhis2-component-search"
+  ],
+  "dhis2ComponentSearch": {
+    "language": "react",
+    "components": [
+      {
+        "name": "Wishachu's Div",
+        "export": "WishachusDiv",
+        "description": "A simple div for evaluation"
+      }
+    ]
   },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
@@ -17,7 +33,7 @@
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
-    "test:lint": "eslint .",
+    "test:lint": "eslint \"**/*.ts\" \"**/*.tsx\"",
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && npm install && npm run build",

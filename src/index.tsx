@@ -5,6 +5,6 @@ interface Props {
   text: string
 }
 
-export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+export const WishachusDiv = ({ text }: Props) => {
+  return <div className={styles.test}>Wishachu's Example Component: {text}</div>
 }
