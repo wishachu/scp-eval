@@ -1,5 +1,5 @@
 {
-  "name": "@wishachu/scp-eval",
+  "name": "wishachu-scp-eval",
   "version": "1.0.0",
   "description": "For evaluation of the DHIS2 SCP",
   "author": "wishachu",
